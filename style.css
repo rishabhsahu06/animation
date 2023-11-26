@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container img{
+    transform-origin: center;
+    transition: all 0.5s;
+    border-radius: 8px;
+    box-shadow: 0px 0px 8px grey;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, #0004);
+}
+.container:hover img{
+    opacity:0.3;
+}
+
+.container img:hover{
+    opacity:1;
+
+}
+body{
+    background-color: black;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container div {
+  margin: 2px;
+  transform: perspective(800px) rotateY(50deg);
+}
+.container div:hover {
+  animation-name: smooth-rotate;
+  /* transform:perspective(800px) rotateY(0deg); */
+  animation-duration:0.5s;
+}
+@keyframes smooth-rotate {
+  0% {
+    transform: perspective(800px) rotateY(50deg);
+  }
+  10% {
+    transform: perspective(800px) rotateY(45deg);
+  }
+  20% {
+    transform: perspective(800px) rotateY(40deg);
+  }
+  30% {
+    transform: perspective(800px) rotateY(35deg);
+  }
+  40% {
+    transform: perspective(800px) rotateY(30deg);
+  }
+  50% {
+    transform: perspective(800px) rotateY(25deg);
+  }
+  60% {
+    transform: perspective(800px) rotateY(20deg);
+  }
+  70% {
+    transform: perspective(800px) rotateY(15deg);
+  }
+  80% {
+    transform: perspective(800px) rotateY(10deg);
+  }
+  90% {
+    transform: perspective(800px) rotateY(5deg);
+  }
+  100% {
+    transform: perspective(800px) rotateY(0deg);
+  }
+}
+
